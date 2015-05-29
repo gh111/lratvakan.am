@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lratvakan Radio FM 106.5</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/fotorama.css" />
+
+
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/main.js?v=0.1"></script>
+
+	<script>
+		$( document ).on( "pagecreate", function() {
+			$( "body > [data-role='panel']" ).panel();
+			$( "body > [data-role='panel'] [data-role='listview']" ).listview();
+		});
+		$( document ).one( "pageshow", function() {
+			$( "body > [data-role='header']" ).toolbar();
+			$( "body > [data-role='header'] [data-role='navbar']" ).navbar();
+		});
+	</script>
+</head>
+<body>
+	<div data-role="panel" id="inside-a" data-position="left" data-display="overlay" data-theme="a">
+		<div class="menuOpenWrapper">
+			<div class="menuBox">
+				<div class="menuBoxHead">
+					<img src="img/logo_nr.png">
+					<a href="#" data-rel="close"><img src="img/back.png"></a>
+				</div>
+				<div class="menuCats">
+						
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main page -->
+
+	<div data-theme="a" data-role="page" id="main">
+
+		<div data-role="header" id="header">
+			<div class="menu">
+				<a href="#inside-a" class="menuBut"></a>
+			</div>
+			<div class="logo"></div>
+			<div class="search">
+				<div class="searchBut">
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="mainstream">
+			<div class="streamer">
+				<div class="player">
+					<div class="playerBox">
+						<audio src="http://212.34.233.78:8000/live" preload="auto"></audio>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="" class="footer">
+			<a href="#main" class="currentTab">
+				<img src="img/icons/1.png">
+				<span>Լսել</span>	
+			</a>
+			<a href="#news" data-ajax="false" data-transition="slideup">
+				<img src="img/icons/2.png">
+				<span>Հոսք</span>	
+			</a>
+			<a href="#about">
+				<img src="img/icons/3.png">
+				<span>Ծանոթանալ</span>	
+			</a>
+		</div>
+	</div>
+
+
+	<!-- Newsline page  -->
+
+	<div data-role="page" id="news">
+		<div data-role="header" id="header">
+			<div class="menu">
+				<a href="#inside-a" class="menuBut"></a>
+			</div>
+			<div class="logo"></div>
+			<div class="search">
+				<div class="searchBut">
+				
+				</div>
+			</div>
+		</div>
+
+		<div id="news" class="main">
+			<div class="mainNews clearfix">
+				<div class="fotorama" id="fotorama1" data-width="1024" data-ratio="1024/694" data-max-width="100%">
+					
+				</div>
+			</div>
+			<div class="titler">
+				<span>Լրահոս</span>
+			</div>
+			<!-- TimeLine data here -->
+			<div class="timeLine"></div>
+		</div>
+
+		<div data-role="" class="footer">
+			<a href="#main" class="currentTab">
+				<img src="img/icons/1.png">
+				<span>Լսել</span>	
+			</a>
+			<a href="#news">
+				<img src="img/icons/2.png">
+				<span>Հոսք</span>	
+			</a>
+			<a href="#about">
+				<img src="img/icons/3.png">
+				<span>Ծանոթանալ</span>	
+			</a>
+		</div>
+
+	</div>	
+
+	<!-- Categories page  -->
+
+	<div data-role="page" id="cat">
+		<div data-role="header" id="header">
+			<div class="menu">
+				<a href="#inside-a" class="menuBut"></a>
+			</div>
+			<div class="logo"></div>
+			<div class="search">
+				<div class="searchBut">
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="titler catTitlerJS">
+				<span></span>
+			</div>
+
+			<div class="catContJS">
+
+			</div>
+			
+		</div>
+
+		<div data-role="" class="footer">
+			<a href="#main" class="currentTab">
+				<img src="img/icons/1.png">
+				<span>Լսել</span>	
+			</a>
+			<a href="#news">
+				<img src="img/icons/2.png">
+				<span>Հոսք</span>	
+			</a>
+			<a href="#about">
+				<img src="img/icons/3.png">
+				<span>Ծանոթանալ</span>	
+			</a>
+		</div>
+
+	</div>
+
+
+	<!-- show page  -->
+
+	<div data-role="page" id="show">
+		<div data-role="header" id="header">
+			<div class="menu">
+				<a href="#inside-a" class="menuBut"></a>
+			</div>
+			<div class="logo"></div>
+			<div class="search">
+				<div class="searchBut">
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="main">
+			<article>
+				<time></time>
+				<h1></h1>
+				<img src="">
+				<div class="video-container"></div>
+						
+				<div class="fotorama" id="fotorama2" data-width="1024" data-ratio="1024/694" data-max-width="100%">
+					<img src="">
+				</div>
+
+				<div class="audio"></div>
+				<div class="desc"></div>
+			</article>
+		</div>
+
+		<div data-role="" class="footer">
+			<a href="#main" class="currentTab">
+				<img src="img/icons/1.png">
+				<span>Լսել</span>	
+			</a>
+			<a href="#news">
+				<img src="img/icons/2.png">
+				<span>Հոսք</span>	
+			</a>
+			<a href="#about">
+				<img src="img/icons/3.png">
+				<span>Ծանոթանալ</span>	
+			</a>
+		</div>
+
+	</div>
+
+
+	<!-- about page  -->
+	<div data-role="page" id="about">
+		<div data-role="header" id="header">
+			<div class="menu">
+				<a href="#inside-a" class="menuBut"></a>
+			</div>
+			<div class="logo"></div>
+			<div class="search">
+				<div class="searchBut">
+				
+				</div>
+			</div>
+		</div>
+
+		<div class="main">
+			<article>
+				<h1>About Us</h1>
+				<p>Concept. News Radio is the only private news and talk radio in Armenia. It is a daytime, workday news channel which broadcasts daily 9 hours of news, highlights, comments and analysis. News Radio is probably the first “open source” radio in the world which means that the responsibility for covering civil issues is handed directly to the civil society. The station provides NPOs and civil activists with unlimited free of charge airtime for their expression as well as free of charge professional production and postproduction services. Significant share of the broadcast content is being generated as a result of our collaboration with the civil society and generally with all the possible parties in interest.  </p>
+				<h1>Contact Us</h1>
+				<p>
+					<ul>
+						<li>Address: G Kochar str. 21 3rd flor, Yerevan, Armenia</li>
+						<li><b>Tel.:</b> +374 60 37 12 73 </li>
+						<li><b>Cell.:</b> +374 55 33 10 65</li>
+						<li><b>Email:</b> impuls@impuls.am</li>
+						<li>www.impuls.am</li>
+					</ul>
+				</p>
+			</article>
+		</div>
+
+		<div data-role="" class="footer">
+			<a href="#main" class="currentTab">
+				<img src="img/icons/1.png">
+				<span>Լսել</span>	
+			</a>
+			<a href="#news">
+				<img src="img/icons/2.png">
+				<span>Հոսք</span>	
+			</a>
+			<a href="#about">
+				<img src="img/icons/3.png">
+				<span>Ծանոթանալ</span>	
+			</a>
+		</div>
+
+	</div>
+</body>
+</html>
